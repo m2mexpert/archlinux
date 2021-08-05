@@ -84,7 +84,7 @@ echo "After chrooting into newly installed OS, please run the post-install.sh by
 echo "Press any key to chroot..."
 read tmpvar
 arch-chroot /mnt /bin/bash
-/root/install.sh
+
 # Finish
 echo "If post-install.sh was run succesfully, you will now have a fully working bootable Arch Linux system installed."
 echo "The only thing left is to reboot into the new system."

@@ -70,7 +70,7 @@ swapon /dev/vda2
 # Install Arch Linux
 echo "Starting install.."
 echo "Installing Arch Linux, KDE with Konsole and Dolphin and GRUB2 as bootloader" 
-pacstrap /mnt base base-devel zsh grml-zsh-config grub os-prober linux linux-firmware intel-ucode efibootmgr dosfstools dhcpcd freetype2 fuse2 mtools iw wpa_supplicant dialog xorg xorg-server xorg-xinit mesa xf86-video-intel plasma konsole dolphin
+pacstrap /mnt base base-devel zsh grml-zsh-config grub os-prober linux linux-firmware intel-ucode efibootmgr dosfstools openssh freetype2 fuse2 mtools iw wpa_supplicant dialog xorg xorg-server xorg-xinit mesa xf86-video-intel plasma konsole dolphin
 
 # Generate fstab
 genfstab -U /mnt >> /mnt/etc/fstab
@@ -84,7 +84,7 @@ echo "After chrooting into newly installed OS, please run the post-install.sh by
 echo "Press any key to chroot..."
 read tmpvar
 arch-chroot /mnt /bin/bash
-
+/root/install.sh
 # Finish
 echo "If post-install.sh was run succesfully, you will now have a fully working bootable Arch Linux system installed."
 echo "The only thing left is to reboot into the new system."

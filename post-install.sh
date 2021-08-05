@@ -39,7 +39,6 @@ passwd jvilla
 systemctl enable sddm.service
 
 # Enable services
-systemctl enable dhcpcd
 systemctl enable NetworkManager.service
 
 echo "Configuration done. You can now exit chroot."

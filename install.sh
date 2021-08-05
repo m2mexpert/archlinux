@@ -83,7 +83,7 @@ chmod a+x /mnt/root/post-install.sh
 echo "After chrooting into newly installed OS, please run the post-install.sh by executing ./post-install.sh"
 echo "Press any key to chroot..."
 read tmpvar
-arch-chroot /mnt /bin/bash
+arch-chroot /mnt /root/post-install.sh
 
 # Finish
 echo "If post-install.sh was run succesfully, you will now have a fully working bootable Arch Linux system installed."

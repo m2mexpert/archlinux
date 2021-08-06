@@ -11,6 +11,7 @@ then
 fi
 
 # Filesystem mount warning
+printf "\033c"
 echo "This script will create and format the partitions as follows:"
 echo "/dev/vda1 - 512Mib will be mounted as /boot/efi"
 echo "/dev/vda2 - 16GiB will be used as swap"
@@ -68,6 +69,7 @@ mkswap /dev/vda2
 swapon /dev/vda2
 
 # Install Arch Linux
+printf "\033c"
 echo "Starting install.."
 echo "Installing Arch Linux, KDE with Konsole and Dolphin and GRUB2 as bootloader" 
 pacstrap /mnt base base-devel zsh grml-zsh-config grub os-prober linux linux-firmware intel-ucode efibootmgr dosfstools openssh freetype2 fuse2 mtools iw wpa_supplicant dialog xorg xorg-server xorg-xinit mesa xf86-video-intel plasma konsole dolphin
@@ -78,6 +80,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 # Copy post-install system configuration script to new /root
 cp -rfv ./archlinux/post-install.sh /mnt/root
 chmod a+x /mnt/root/post-install.sh
+printf "\033c"
 
 # Chroot into new system and run remaining setup
 arch-chroot /mnt /root/post-install.sh

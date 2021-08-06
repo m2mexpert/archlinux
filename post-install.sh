@@ -22,6 +22,7 @@ echo "127.0.1.1 archvm.localdomain  archvm" >> /etc/hosts
 mkinitcpio -P
 
 # Set root password
+echo "Set password for root"
 passwd
 
 # Install bootloader

@@ -80,12 +80,11 @@ cp -rfv post-install.sh /mnt/root
 chmod a+x /mnt/root/post-install.sh
 
 # Chroot into new system and run remaining setup
-echo "The next chrooting into newly installed OS, please run the post-install.sh by executing ./post-install.sh"
-echo "Press any key to chroot..."
-#read tmpvar
+cls
 arch-chroot /mnt /root/post-install.sh
 
 # Finish
+cls
 echo "If post-install.sh was run succesfully, you will now have a fully working bootable Arch Linux system installed."
 echo "The only thing left is to reboot into the new system."
 echo "Press any key to reboot or Ctrl+C to cancel..."

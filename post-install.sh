@@ -2,7 +2,7 @@
 
 # This is Configuration script of Krushn's Arch Linux Installation Package.
 # Visit krushndayshmookh.github.io/krushn-arch for instructions.
-
+printf "\033c"
 echo "Joe's Super Cool Arch Configurator"
 
 # Set date time

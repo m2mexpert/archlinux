@@ -1,5 +1,5 @@
 #! /bin/bash
-
+printf "\033c"
 echo "Joe's Way Cool Arch Installer"
 
 # Set up network connection
@@ -80,11 +80,11 @@ cp -rfv post-install.sh /mnt/root
 chmod a+x /mnt/root/post-install.sh
 
 # Chroot into new system and run remaining setup
-cls
+printf "\033c"
 arch-chroot /mnt /root/post-install.sh
 
 # Finish
-cls
+printf "\033c"
 echo "If post-install.sh was run succesfully, you will now have a fully working bootable Arch Linux system installed."
 echo "The only thing left is to reboot into the new system."
 echo "Press any key to reboot or Ctrl+C to cancel..."

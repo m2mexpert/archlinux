@@ -79,10 +79,10 @@ genfstab -U /mnt >> /mnt/etc/fstab
 cp -rfv post-install.sh /mnt/root
 chmod a+x /mnt/root/post-install.sh
 
-# Chroot into new system
-echo "After chrooting into newly installed OS, please run the post-install.sh by executing ./post-install.sh"
+# Chroot into new system and run remaining setup
+echo "The next chrooting into newly installed OS, please run the post-install.sh by executing ./post-install.sh"
 echo "Press any key to chroot..."
-read tmpvar
+#read tmpvar
 arch-chroot /mnt /root/post-install.sh
 
 # Finish

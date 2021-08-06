@@ -75,7 +75,7 @@ pacstrap /mnt base base-devel zsh grml-zsh-config grub os-prober linux linux-fir
 genfstab -U /mnt >> /mnt/etc/fstab
 
 # Copy post-install system cinfiguration script to new /root
-cp -rfv /archlinux/post-install.sh /mnt/root
+cp -rfv /root/archlinux/post-install.sh /mnt/root
 chmod a+x /mnt/root/post-install.sh
 
 # Chroot into new system and run remaining setup

@@ -22,6 +22,7 @@ echo "127.0.1.1 archvm.localdomain  archvm" >> /etc/hosts
 mkinitcpio -P
 
 # Set root password
+printf "\033c"
 echo "Set password for root"
 passwd
 
@@ -30,6 +31,7 @@ grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=arch
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # Create new user
+printf "\033c"
 useradd -m -G wheel,power,input,storage,uucp,network -s /usr/bin/zsh jvilla
 sed --in-place 's/^#\s*\(%wheel\s\+ALL=(ALL)\s\+NOPASSWD:\s\+ALL\)/\1/' /etc/sudoers
 echo "Set password for new user jvilla"

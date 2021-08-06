@@ -58,8 +58,8 @@ timedatectl set-ntp true
 
 # Initate pacman keyring
 pacman-key --init
-#pacman-key --populate archlinux
-#pacman-key --refresh-keys
+pacman-key --populate archlinux
+pacman-key --refresh-keys
 
 # Mount the partitions
 mount /dev/vda3 /mnt
